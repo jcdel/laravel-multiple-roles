@@ -16,7 +16,7 @@ class AdminController extends Controller
     {
        $users = User::all();
 
-       return view('/admin', compact('users'));
+       return view('/admin.index', compact('users'));
     }
 
     /**

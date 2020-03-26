@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 /** Admin Routes */
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
@@ -45,7 +45,3 @@ Route::group(['prefix' => 'student', 'middleware' => 'student'], function () {
     Route::get('/', 'StudentController@index')->name('student.index');
     Route::get('/{id}', 'StudentController@show')->name('student.show');
 });
-
-// Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
-// Route::get('/teacher', 'TeacherController@index')->name('teacher')->middleware('teacher');
-// Route::get('/student', 'StudentController@index')->name('student')->middleware('student');

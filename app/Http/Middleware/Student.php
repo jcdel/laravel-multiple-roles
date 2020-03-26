@@ -21,11 +21,11 @@ class Student
         }
 
         if (Auth::user()->role == 1) {
-            return redirect()->route('admin');
+            return redirect()->route('admin.index');
         }
 
         if (Auth::user()->role == 2) {
-            return redirect()->route('teacher');
+            return redirect()->route('teacher.index');
         }
 
         if (Auth::user()->role == 3) {

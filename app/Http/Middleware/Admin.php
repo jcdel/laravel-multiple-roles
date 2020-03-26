@@ -26,11 +26,11 @@ class Admin
         }
 
         if (Auth::user()->role == 2) {
-            return redirect()->route('teacher');
+            return redirect()->route('teacher.index');
         }
 
         if (Auth::user()->role == 3) {
-            return redirect()->route('student');
+            return redirect()->route('student.index');
         }
     }
 }

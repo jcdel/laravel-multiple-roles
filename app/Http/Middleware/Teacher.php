@@ -21,7 +21,7 @@ class Teacher
         }
 
         if (Auth::user()->role == 1) {
-            return redirect()->route('admin');
+            return redirect()->route('admin.index');
         }
 
         if (Auth::user()->role == 2) {
@@ -29,7 +29,7 @@ class Teacher
         }
 
         if (Auth::user()->role == 3) {
-            return redirect()->route('student');
+            return redirect()->route('student.index');
         }
     }
 }

@@ -16,7 +16,7 @@ class StudentController extends Controller
     {
         $students = User::where('role', 3)->get();
 
-       return view('/student', compact('students'));
+       return view('/student.index', compact('students'));
     }
 
     /**
