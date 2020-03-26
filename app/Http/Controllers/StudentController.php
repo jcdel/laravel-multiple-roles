@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class StudentController extends Controller
 {
@@ -13,7 +14,9 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $student = User::where('role', 3)->get();
+
+       return view('/student', compact('student'));
     }
 
     /**
